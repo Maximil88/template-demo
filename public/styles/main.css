@@ -1,7 +1,74 @@
 .y-sticky {
-    display:flex;
+    display: flex;
     flex-direction: column;
     height: 100%;
-}
-
-y-wrap
+  }
+  
+  .y-wrap {
+    margin: 0 auto;
+    max-width: 800px;
+    width: 90%;
+  }
+  
+  .gallery {
+    background-color: coral;
+    display: flex;
+    flex-direction: column;
+    margin: 50px 0;
+  }
+  
+  .gallery__image {
+    min-height: 260px;
+    margin: 10px auto;
+    width: 80%;
+  }
+  
+  .gallery__image--primary {
+    background-color: cornsilk;
+  }
+  
+  .gallery__image--secondary {
+    background-color: cornflowerblue;
+    width: 80%;
+  }
+  
+  @media screen and (min-width: 768px) {
+    .gallery {
+      flex-direction: row;
+    }
+  
+    .gallery__image {
+      margin: 0;
+    }
+  
+    .gallery__set {
+      display: flex;
+      justify-content: space-between;
+    }
+  
+    .gallery__set-container {
+      display: flex;
+      flex-direction: column;
+      flex: 2 0 auto;
+      justify-content: space-between;
+      width: 40%;
+    }
+  
+    .gallery__set:first-of-type {
+      margin-bottom: 4px; /* related to interior spacing between the secondary images */
+    }
+  
+    .gallery__set:last-of-type {
+      margin-top: 4px; /* related to interior spacing between the secondary images */
+    }
+  
+    .gallery__image--primary {
+      flex: 1 1 auto;
+      margin-right: 8px;
+      width: 40%;
+    }
+  
+    .gallery__image--secondary {
+      width: 49%; /* at 49%, there is a natural gap in between two boxes that equals 8px */
+    }
+  }
